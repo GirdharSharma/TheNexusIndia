@@ -1,18 +1,18 @@
-"use client"
-import AdOne from '@/components/AdsWidget/AdOne';
-import Drawer from '@/components/Layout/Drawer/Drawer';
-import Footer from '@/components/Layout/Footer/Footer';
-import FooterCopyright from '@/components/Layout/Footer/FooterCopyright';
-import Header from '@/components/Layout/Header/Header';
-import Layout from '@/components/Layout/Layout';
-import TrendingCarousel from '@/components/News/TrendingCarousel';
-import NewsLetter from '@/components/Newsletter/NewsLetter';
-import NewsTabs from '@/components/Sidebar/NewsTabs';
-import useToggle from '@/Hooks/useToggle';
-import Link from 'next/link';
-import React from 'react';
+"use client";
+import AdOne from "@/components/AdsWidget/AdOne";
+import Drawer from "@/components/Layout/Drawer/Drawer";
+import Footer from "@/components/Layout/Footer/Footer";
+import FooterCopyright from "@/components/Layout/Footer/FooterCopyright";
+import Header from "@/components/Layout/Header/Header";
+import Layout from "@/components/Layout/Layout";
+import TrendingCarousel from "@/components/News/TrendingCarousel";
+import NewsLetter from "@/components/Newsletter/NewsLetter";
+import NewsTabs from "@/components/Sidebar/NewsTabs";
+import useToggle from "@/Hooks/useToggle";
+import Link from "next/link";
+import React from "react";
 
-export default function archive() {
+export default function Archive() {
   const [drawer, drawerAction] = useToggle(false);
   return (
     <Layout>
