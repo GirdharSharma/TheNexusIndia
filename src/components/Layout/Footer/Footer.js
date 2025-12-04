@@ -48,7 +48,7 @@ export default function Footer({ dark }) {
             </div>
           </div>
         </div>
-        <div className="footer-widget-area">
+        {/* <div className="footer-widget-area">
           <div className="row">
             <div className="col-lg-8">
               <div className="footer-widget-right-border">
@@ -282,7 +282,7 @@ export default function Footer({ dark }) {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

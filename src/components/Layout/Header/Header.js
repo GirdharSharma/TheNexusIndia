@@ -22,7 +22,7 @@ export default function Header({ customClass, className, action, dark }) {
               >
                 <i className="fa fa-bars" />
               </div>
-              <div className="col-lg-11">
+              <div className="col-lg-12">
                 <div
                   className={`newsprk-header-main-menu ${
                     dark ? "newsprk-header-main-menu-dark" : ""

@@ -1,17 +1,17 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
 export default function FooterCopyright({ dark }) {
   return (
     <section
-      className={`footer-copyright ${dark ? 'footer-copyright-dark' : ''}`}
+      className={`footer-copyright ${dark ? "footer-copyright-dark" : ""}`}
     >
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="copyright-item d-block d-md-flex justify-content-between align-items-center">
-              <p>© Copyright 2020, All Rights Reserved</p>
-              <ul>
+            <div className="copyright-item text-center d-block d-md-flex justify-content-center align-items-center">
+              <p>© Copyright 2025, All Rights Reserved</p>
+              {/* <ul>
                 <li>
                   <Link href="/about">About</Link>
                 </li>
@@ -24,7 +24,7 @@ export default function FooterCopyright({ dark }) {
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
