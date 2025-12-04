@@ -1,17 +1,22 @@
-import Link from 'next/link';
-import React from 'react';
-import CategoryWidget from './CategoryWidget';
+import Link from "next/link";
+import React from "react";
+import CategoryWidget from "./CategoryWidget";
 
 export default function Footer({ dark }) {
   return (
-    <footer className={`footer-area ${dark ? 'footer-dark' : ''}`}>
+    <footer className={`footer-area ${dark ? "footer-dark" : ""}`}>
       <div className="container">
         <div className="footer-topbar">
           <div className="row align-items-center">
             <div className="col-lg-7 col-md-5">
               <div className="footer-logo">
                 <Link href="/">
-                  <img src="/images/logo/logo-white.png" alt="" />
+                  <img
+                    // src="/images/logo/tni-logo-transparent.png"
+                    src="/images/logo/footer-logo.png"
+                    alt=""
+                    style={{ width: "70%" }}
+                  />
                 </Link>
                 <ul>
                   <li>
