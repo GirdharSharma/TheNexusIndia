@@ -47,12 +47,12 @@ function Drawer({ drawer, action }) {
                       return (
                         <li key={level1Key}>
                           {/* Level 1 */}
-                          {item.child && (
-                            <div
-                              className="menu-item menu-expand"
-                              onClick={() => toggleMenu(level1Key)}
-                            >
-                              <span className="menu-expand">
+                          <div className="menu-item">
+                            {item.child && (
+                              <span
+                                className="menu-expand"
+                                onClick={() => toggleMenu(level1Key)}
+                              >
                                 <i
                                   className={`fa ${
                                     openMenus[level1Key]
@@ -61,29 +61,32 @@ function Drawer({ drawer, action }) {
                                   }`}
                                 ></i>
                               </span>
+                            )}
 
-                              <Link href={item.link || "#"}>
-                                {item.linkText}
-                              </Link>
-                            </div>
-                          )}
+                            <Link href={item.link || "#"}>{item.linkText}</Link>
+                          </div>
 
                           {/* Level 2 */}
                           {item.child &&
                             item.submenu &&
                             openMenus[level1Key] && (
-                              <ul className="sidebar-sub-menu list-unstyled ml-3">
+                              <ul
+                                className="sidebar-sub-menu list-unstyled ml-3"
+                                style={{ display: "block" }}
+                              >
                                 {item.submenu.map((sItem, j) => {
                                   const level2Key = `l2-${i}-${j}`;
 
                                   return (
                                     <li key={level2Key}>
-                                      {sItem.child && (
-                                        <div
-                                          className="menu-item menu-expand"
-                                          onClick={() => toggleMenu(level2Key)}
-                                        >
-                                          <span className="menu-expand">
+                                      <div className="menu-item">
+                                        {sItem.child && (
+                                          <span
+                                            className="menu-expand"
+                                            onClick={() =>
+                                              toggleMenu(level2Key)
+                                            }
+                                          >
                                             <i
                                               className={`fa ${
                                                 openMenus[level2Key]
@@ -92,12 +95,12 @@ function Drawer({ drawer, action }) {
                                               }`}
                                             ></i>
                                           </span>
+                                        )}
 
-                                          <Link href={sItem.link || "#"}>
-                                            {sItem.linkText}
-                                          </Link>
-                                        </div>
-                                      )}
+                                        <Link href={sItem.link || "#"}>
+                                          {sItem.linkText}
+                                        </Link>
+                                      </div>
 
                                       {/* Level 3 */}
                                       {sItem.child &&
