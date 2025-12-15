@@ -1,73 +1,130 @@
-import React from 'react';
-import Link from 'next/link';
-import data  from '@/data/navigation';
+import React, { useState } from "react";
+import Link from "next/link";
+import categoryData from "@/data/categoryData";
 
 function Drawer({ drawer, action }) {
+  const [openMenus, setOpenMenus] = useState({});
+
+  const toggleMenu = (key) => {
+    setOpenMenus((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
   return (
     <>
-      <div className={`off_canvars_overlay ${drawer ? 'active' : ''}`}></div>
+      <div className={`off_canvars_overlay ${drawer ? "active" : ""}`}></div>
+
       <div className="offcanvas_menu">
         <div className="container-fluid">
           <div className="row">
             <div className="col-12">
               <div
-                className={`offcanvas_menu_wrapper ${drawer ? 'active' : ''}`}
+                className={`offcanvas_menu_wrapper ${drawer ? "active" : ""}`}
               >
+                {/* Close Button */}
                 <div className="canvas_close">
-                  <a href="javascript:void(0)" onClick={(e) => action(e)}>
+                  <a href="#" onClick={action}>
                     <i className="fa fa-times"></i>
                   </a>
                 </div>
-                <div className="offcanvas-brand text-center mb-40">
-                  <img src="/images/logo/logo-black.png" alt="newsprk" />
+
+                {/* Logo */}
+                <div className="offcanvas-brand text-center mt-20 mb-30">
+                  <img
+                    src="/images/logo/tni-logo-transparent.png"
+                    alt="newsprk"
+                  />
                 </div>
-                {data && data.length > 0 && (
-                  <div id="menu" className="text-left">
-                    <ul className="offcanvas_main_menu list-unstyled">
-                      {data.map((item, i) => (
-                        <li key={i}>
-                          {item.submenu && item.submenu.length > 0 && (
-                            <span className="menu-expand">
-                              <i className="fa fa-angle-down"></i>
-                            </span>
+
+                {/* MENU */}
+                <div id="menu" className="text-left">
+                  <ul className="offcanvas_main_menu list-unstyled">
+                    {categoryData.map((item, i) => {
+                      const level1Key = `l1-${i}`;
+
+                      return (
+                        <li key={level1Key}>
+                          {/* Level 1 */}
+                          {item.child && (
+                            <div
+                              className="menu-item menu-expand"
+                              onClick={() => toggleMenu(level1Key)}
+                            >
+                              <span className="menu-expand">
+                                <i
+                                  className={`fa ${
+                                    openMenus[level1Key]
+                                      ? "fa-angle-up"
+                                      : "fa-angle-down"
+                                  }`}
+                                ></i>
+                              </span>
+
+                              <Link href={item.link || "#"}>
+                                {item.linkText}
+                              </Link>
+                            </div>
                           )}
-                          {item.link ? (
-                            <Link href={item.link}>{item.linkText}</Link>
-                          ) : (
-                            <Link href="#">{item.linkText}</Link>
-                          )}
-                          {item.submenu && (
-                            <ul className="sidebar-sub-menu list-unstyled ml-3">
-                              {item.submenu.map((sItem, j) => (
-                                <li key={j}>
-                                  {sItem.child && (
-                                    <span className="menu-expand">
-                                      <i className="fa fa-angle-down"></i>
-                                    </span>
-                                  )}
-                                  <Link href={sItem.link}>
-                                    {sItem.linkText}
-                                  </Link>
-                                  {sItem.child && (
-                                    <ul>
-                                      {sItem.third_menu.map((thirdMenu, k) => (
-                                        <li key={k}>
-                                          <Link href={thirdMenu.link}>
-                                            {thirdMenu.linkText}
+
+                          {/* Level 2 */}
+                          {item.child &&
+                            item.submenu &&
+                            openMenus[level1Key] && (
+                              <ul className="sidebar-sub-menu list-unstyled ml-3">
+                                {item.submenu.map((sItem, j) => {
+                                  const level2Key = `l2-${i}-${j}`;
+
+                                  return (
+                                    <li key={level2Key}>
+                                      {sItem.child && (
+                                        <div
+                                          className="menu-item menu-expand"
+                                          onClick={() => toggleMenu(level2Key)}
+                                        >
+                                          <span className="menu-expand">
+                                            <i
+                                              className={`fa ${
+                                                openMenus[level2Key]
+                                                  ? "fa-angle-up"
+                                                  : "fa-angle-down"
+                                              }`}
+                                            ></i>
+                                          </span>
+
+                                          <Link href={sItem.link || "#"}>
+                                            {sItem.linkText}
                                           </Link>
-                                        </li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
+                                        </div>
+                                      )}
+
+                                      {/* Level 3 */}
+                                      {sItem.child &&
+                                        sItem.third_menu &&
+                                        openMenus[level2Key] && (
+                                          <ul className="ml-3">
+                                            {sItem.third_menu.map(
+                                              (third, k) => (
+                                                <li key={`l3-${i}-${j}-${k}`}>
+                                                  <Link href={third.link}>
+                                                    {third.linkText}
+                                                  </Link>
+                                                </li>
+                                              )
+                                            )}
+                                          </ul>
+                                        )}
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            )}
                         </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
