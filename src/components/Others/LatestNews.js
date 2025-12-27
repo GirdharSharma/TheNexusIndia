@@ -17,7 +17,9 @@ export default function LatestNews() {
   useEffect(() => {
     const loadLatestBlogs = async () => {
       try {
-        const res = await axios.get("https://thenexusindia.in/blogs/blog");
+        const res = await axios.get(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
 
         if (res.data.status) {
           const allBlogs = res.data.data;
@@ -117,8 +119,9 @@ export default function LatestNews() {
                     </div>
 
                     <h3 className="title">
-                    <Link href={`/blogs/${blog.id}/${makeSlug(blog.title)}`}>
-                        {blog.title}</Link>
+                      <Link href={`/blogs/${blog.id}/${makeSlug(blog.title)}`}>
+                        {blog.title}
+                      </Link>
                     </h3>
 
                     <p className="text">{blog.description.slice(0, 120)}...</p>

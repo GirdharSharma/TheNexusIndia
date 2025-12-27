@@ -28,7 +28,7 @@ export default function CategoryPage({ params }) {
   useEffect(() => {
     const loadBlogs = async () => {
       try {
-        const res = await axios.get("https://thenexusindia.in/blogs/blog");
+        const res = await axios.get("https://coral-rail-888634.hostingersite.com/blog");
 
         if (res.data.status) {
           const all = res.data.data;

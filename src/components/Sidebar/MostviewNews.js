@@ -43,7 +43,9 @@ export default function MostviewNews({ dark }) {
   useEffect(() => {
     const loadMostView = async () => {
       try {
-        const res = await axios.get("https://thenexusindia.in/blogs/blog");
+        const res = await axios.get(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
 
         if (res.data.status) {
           const allBlogs = res.data.data;

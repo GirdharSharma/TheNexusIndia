@@ -34,7 +34,9 @@ export default function BlogDetailsPage() {
 
     const fetchBlog = async () => {
       try {
-        const res = await fetch("https://thenexusindia.in/blogs/blog");
+        const res = await fetch(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
         const data = await res.json();
 
         if (data.status) {

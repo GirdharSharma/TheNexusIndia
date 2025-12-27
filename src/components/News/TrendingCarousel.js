@@ -43,7 +43,9 @@ export default function TrendingCarousel({ dark }) {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await axios.get("https://thenexusindia.in/blogs/blog");
+        const res = await axios.get(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
 
         if (res.data.status) {
           const allBlogs = res.data.data;
@@ -171,7 +173,7 @@ export default function TrendingCarousel({ dark }) {
                   ></div>
                 )}
                 <div className="icon">
-                <Link href={`/blogs/${blog.id}/${makeSlug(blog.title)}`}>
+                  <Link href={`/blogs/${blog.id}/${makeSlug(blog.title)}`}>
                     <i className="fas fa-bolt"></i>
                   </Link>
                 </div>
