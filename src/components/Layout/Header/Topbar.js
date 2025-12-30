@@ -29,10 +29,12 @@ export default function Topbar() {
     slidesToScroll: 1,
 
     dots: false,
+    infinite: trendingNews.length > 1,
+    autoplay: trendingNews.length > 1,
 
-    infinite: true,
+    // infinite: true,
 
-    autoplay: true,
+    // autoplay: true,
 
     autoplaySpeed: 3000,
 
