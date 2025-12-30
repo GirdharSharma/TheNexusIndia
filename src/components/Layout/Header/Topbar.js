@@ -30,7 +30,7 @@ export default function Topbar() {
 
     dots: false,
     infinite: trendingNews.length > 1,
-    autoplay: trendingNews.length > 1,
+    autoplay: true,
 
     // infinite: true,
 
