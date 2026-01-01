@@ -30,9 +30,17 @@ function makeSlug(title = "") {
 }
 
 // LIMIT WORDS HELPER
-function limitWords(text, limit) {
-  if (!text) return "";
-  const words = text.split(" ");
+function limitWords(html, limit = 20) {
+  if (!html) return "";
+
+  // Convert HTML to plain text
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  const text = div.textContent || div.innerText || "";
+
+  // Limit words
+  const words = text.trim().split(/\s+/);
+
   return words.length > limit ? words.slice(0, limit).join(" ") + "..." : text;
 }
 
@@ -74,7 +82,7 @@ export default function TrendingCarousel({ dark }) {
     slidesToScroll: 1,
     dots: false,
     infinite: blogs.length > 1,
-    autoplay: blogs.length > 1,
+    autoplay: true,
     autoplaySpeed: 3000,
     arrows: blogs.length > 1,
     prevArrow: <PrevArrow />,
