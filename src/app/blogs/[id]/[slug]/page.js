@@ -125,7 +125,13 @@ export default function BlogDetailsPage() {
                       <p>Loading description...</p>
                     ) : (
                       //   <p>{blog?.description}</p>
-                      <ReactMarkdown>{blog?.description || ""}</ReactMarkdown>
+                      // <ReactMarkdown>{blog?.description || ""}</ReactMarkdown>
+                      <div
+                        className="blog-description"
+                        dangerouslySetInnerHTML={{
+                          __html: blog?.description || "",
+                        }}
+                      />
                     )}
                   </div>
 
