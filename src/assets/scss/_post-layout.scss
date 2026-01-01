@@ -90,8 +90,8 @@
       line-height: 24px;
     }
     p {
-      margin-bottom: 27px;
-      color: #515A60;
+      margin-bottom: 0.5rem;
+      color: #515a60;
       .user {
         display: inline-block;
         line-height: 28px;
@@ -141,7 +141,7 @@
       position: relative;
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         left: 0;
         top: 0;
         height: 100%;
@@ -175,7 +175,7 @@
         z-index: 10;
         &::before {
           position: absolute;
-          content: '';
+          content: "";
           left: 0;
           top: 0;
           height: 100%;
@@ -415,7 +415,7 @@
     padding-left: 20px;
     &::before {
       position: absolute;
-      content: '';
+      content: "";
       left: 0;
       top: 50%;
       transform: translateY(-50%);
