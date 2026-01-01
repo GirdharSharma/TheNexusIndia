@@ -41,6 +41,12 @@ export default function LatestNews() {
     loadLatestBlogs();
   }, []);
 
+  function htmlToText(html) {
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    return div.textContent || div.innerText || "";
+  }
+
   return (
     <section className="latest-news-area">
       <div className="container">
@@ -124,7 +130,10 @@ export default function LatestNews() {
                       </Link>
                     </h3>
 
-                    <p className="text">{blog.description.slice(0, 120)}...</p>
+                    {/* <p className="text">{blog.description.slice(0, 120)}...</p> */}
+                    <p className="text">
+                      {htmlToText(blog.description).slice(0, 120)}...
+                    </p>
                   </div>
                 </div>
               </div>

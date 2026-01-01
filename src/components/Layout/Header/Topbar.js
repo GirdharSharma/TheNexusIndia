@@ -123,7 +123,7 @@ export default function Topbar() {
                       <div className="trending-item" key={item.id}>
                         <p>
                           <Link href={`/blogs/${item.id}/${slug}`}>
-                            {item.title}
+                            {item.title.slice(0, 50)}...
                           </Link>
                         </p>
                       </div>
