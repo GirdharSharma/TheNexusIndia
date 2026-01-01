@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { htmlExcerpt } from "@/utils/text";
 
 function makeSlug(title = "") {
   return title
@@ -188,9 +189,10 @@ export default function EntertainmentNews({ dark }) {
                   </h3>
 
                   <p className="text">
-                    {item.description
+                    {htmlExcerpt(item.description, 120)}...
+                    {/* {item.description
                       ? item.description.slice(0, 120) + "..."
-                      : ""}
+                      : ""} */}
                   </p>
                 </div>
               </div>

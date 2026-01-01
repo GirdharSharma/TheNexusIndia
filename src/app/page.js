@@ -34,7 +34,9 @@ export default function HomeOneOne() {
   useEffect(() => {
     const loadSports = async () => {
       try {
-        const res = await axios.get("https://coral-rail-888634.hostingersite.com/blog");
+        const res = await axios.get(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
 
         if (res.data.status) {
           const all = res.data.data;

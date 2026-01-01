@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import { htmlExcerpt } from "@/utils/text";
 
 function makeSlug(title = "") {
   return title
@@ -145,7 +146,8 @@ export default function BusinessNews({ dark }) {
                       </h3>
 
                       <p className="text">
-                        {item.description?.slice(0, 120)}...
+                        {htmlExcerpt(item.description, 120)}...
+                        {/* {item.description?.slice(0, 120)}... */}
                       </p>
 
                       <Link href={`/blogs/${item.id}/${makeSlug(item.title)}`}>
