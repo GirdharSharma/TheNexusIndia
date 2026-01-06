@@ -26,6 +26,12 @@ function makeSlug(title = "") {
     .replace(/^-+|-+$/g, ""); // trim starting/ending -
 }
 
+function htmlToText(html) {
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
+}
+
 export default function TrendingSingleCarousel() {
   const [entertainment, setEntertainment] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -151,7 +157,10 @@ export default function TrendingSingleCarousel() {
                   </Link>
                 </h3>
 
-                <p className="text">{item.description?.slice(0, 100)}...</p>
+                {/* <p className="text">{item.description?.slice(0, 100)}...</p> */}
+                <p className="text">
+                  {htmlToText(item.description).slice(0, 100)}...
+                </p>
               </div>
             </div>
           ))}
