@@ -9,14 +9,14 @@ export default function FooterCopyright({ dark }) {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="copyright-item text-center d-block d-md-flex justify-content-center align-items-center">
+            <div className="copyright-item text-center d-block d-md-flex justify-content-between align-items-center">
               <p>© Copyright 2025, All Rights Reserved</p>
-              {/* <ul>
-                <li>
+              <ul>
+                {/* <li>
                   <Link href="/about">About</Link>
-                </li>
+                </li> */}
                 <li>
-                  <a href="#">Advertise</a>
+                  <a href="#">Terms&Conditions</a>
                 </li>
                 <li>
                   <a href="#">Privacy & Policy</a>
@@ -24,7 +24,7 @@ export default function FooterCopyright({ dark }) {
                 <li>
                   <Link href="/contact">Contact Us</Link>
                 </li>
-              </ul> */}
+              </ul>
             </div>
           </div>
         </div>
