@@ -52,7 +52,7 @@ export default function MostviewNews({ dark }) {
 
           // Filter only "Most View" blogs
           let filtered = allBlogs.filter(
-            (b) => b.sub_category?.toLowerCase() === "most view"
+            (b) => b.sub_category?.toLowerCase() === "most viewed"
           );
 
           // Sort by newest

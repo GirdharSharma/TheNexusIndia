@@ -51,7 +51,7 @@ export default function NewsTabs({ dark }) {
     .slice(0, 5);
 
   const popularBlogs = blogs
-    .filter((b) => b.sub_category?.toLowerCase() === "most view")
+    .filter((b) => b.sub_category?.toLowerCase() === "most viewed")
     .sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
     .slice(0, 5);
 
