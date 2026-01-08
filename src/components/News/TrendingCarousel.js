@@ -58,7 +58,7 @@ export default function TrendingCarousel({ dark }) {
         if (res.data.status) {
           const allBlogs = res.data.data;
           const now = new Date();
-          const twoDaysAgo = new Date();
+          const threeDaysAgo = new Date();
           threeDaysAgo.setDate(now.getDate() - 3);
 
           // Filter only trending blogs
