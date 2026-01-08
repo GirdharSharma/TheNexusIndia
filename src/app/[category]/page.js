@@ -28,15 +28,17 @@ export default function CategoryPage({ params }) {
   useEffect(() => {
     const loadBlogs = async () => {
       try {
-        const res = await axios.get("https://coral-rail-888634.hostingersite.com/blog");
+        const res = await axios.get(
+          "https://coral-rail-888634.hostingersite.com/blog"
+        );
 
         if (res.data.status) {
           const all = res.data.data;
 
           // Filter blogs where category matches URL
-          const filtered = all.filter(
-            (b) => b.category?.toLowerCase() === category.toLowerCase()
-          );
+          const filtered = all
+            .filter((b) => b.category?.toLowerCase() === category.toLowerCase())
+            .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
           setBlogs(filtered);
         }
@@ -192,7 +194,7 @@ export default function CategoryPage({ params }) {
                       {/* Pagination (visible only when data loaded) */}
                       {!loading && (
                         <div className="col-lg-12">
-                          <Pagination customClass="pt-40" />
+                          {/* <Pagination customClass="pt-40" /> */}
                         </div>
                       )}
                     </div>

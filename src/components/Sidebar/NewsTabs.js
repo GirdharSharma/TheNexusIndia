@@ -204,7 +204,11 @@ export default function NewsTabs({ dark }) {
                       </div>
 
                       <h4 className="title">
-                        <Link href={`/blogs/${item.id}`}>{item.title}</Link>
+                        <Link
+                          href={`/blogs/${item.id}/${makeSlug(item.title)}`}
+                        >
+                          {item.title}
+                        </Link>
                       </h4>
                     </>
                   ) : (
@@ -264,7 +268,11 @@ export default function NewsTabs({ dark }) {
                       </div>
 
                       <h4 className="title">
-                        <Link href={`/blogs/${item.id}`}>{item.title}</Link>
+                        <Link
+                          href={`/blogs/${item.id}/${makeSlug(item.title)}`}
+                        >
+                          {item.title}
+                        </Link>
                       </h4>
                     </>
                   ) : (

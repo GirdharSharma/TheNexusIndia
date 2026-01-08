@@ -103,7 +103,7 @@ const categoryData = [
     child: true,
     icon: "angle-down",
     submenu: [
-      { id: 31, link: "/world/usa", linkText: "United States" },
+      { id: 31, link: "/world/USA", linkText: "United States" },
       { id: 32, link: "/world/uk", linkText: "United Kingdom" },
       { id: 33, link: "/world/china", linkText: "China" },
       { id: 34, link: "/world/russia", linkText: "Russia" },

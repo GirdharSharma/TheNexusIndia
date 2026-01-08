@@ -57,13 +57,20 @@ export default function TrendingCarousel({ dark }) {
 
         if (res.data.status) {
           const allBlogs = res.data.data;
+          const now = new Date();
+          const twoDaysAgo = new Date();
+          twoDaysAgo.setDate(now.getDate() - 2);
 
-          // ❗ Filter only trending blogs
-          const trending = allBlogs.filter(
-            (b) =>
-              b.category?.toLowerCase() === "trending" ||
-              b.sub_category?.toLowerCase() === "trending"
-          );
+          // Filter only trending blogs
+          const trending = allBlogs
+            .filter(
+              (b) =>
+                b.category?.toLowerCase() === "trending" ||
+                (b.sub_category?.toLowerCase() === "trending" &&
+                  b.created_at &&
+                  new Date(b.created_at) >= twoDaysAgo)
+            )
+            .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
           setBlogs(trending);
         }
