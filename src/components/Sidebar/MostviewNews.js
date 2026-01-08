@@ -27,7 +27,7 @@ function makeSlug(title = "") {
     .replace(/^-+|-+$/g, ""); // trim starting/ending -
 }
 
-// ⭐ Utility: Chunk array into groups of 5 blogs
+// ⭐ Utility: Chunk array into groups of 6 blogs
 const chunkArray = (array, size) => {
   const chunks = [];
   for (let i = 0; i < array.length; i += size) {
@@ -73,7 +73,7 @@ export default function MostviewNews({ dark }) {
   }, []);
 
   // ⭐ Group into slides of 5 posts
-  const slides = chunkArray(mostViewPosts, 5);
+  const slides = chunkArray(mostViewPosts, 6);
 
   const settings = {
     slidesToShow: 1,

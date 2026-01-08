@@ -59,7 +59,7 @@ export default function TrendingCarousel({ dark }) {
           const allBlogs = res.data.data;
           const now = new Date();
           const twoDaysAgo = new Date();
-          twoDaysAgo.setDate(now.getDate() - 2);
+          threeDaysAgo.setDate(now.getDate() - 3);
 
           // Filter only trending blogs
           const trending = allBlogs
@@ -68,7 +68,7 @@ export default function TrendingCarousel({ dark }) {
                 b.category?.toLowerCase() === "trending" ||
                 (b.sub_category?.toLowerCase() === "trending" &&
                   b.created_at &&
-                  new Date(b.created_at) >= twoDaysAgo)
+                  new Date(b.created_at) >= threeDaysAgo)
             )
             .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
