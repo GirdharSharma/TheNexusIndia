@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://thenexusindia.in
+
+# Sitemaps
+Sitemap: https://thenexusindia.in/sitemap.xml
