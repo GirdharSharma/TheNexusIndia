@@ -62,14 +62,14 @@ export default function TermsConditions() {
       <section className="privacy-policy pt-70 pb-70">
         <div className="container">
           <div className="policy-card">
-            <h1 className="policy-title">Terms & Conditions</h1>
+            <h1 className="policy-title">Terms &amp; Conditions</h1>
             <p className="policy-date">Last updated: 10-01-2026</p>
 
             <div className="policy-content">
               <p>Welcome to The Nexus India!</p>
               <p>
                 These terms and conditions outline the rules and regulations for
-                the use of The Nexus India's Website, located at{" "}
+                the use of The Nexus India&apos;s Website, located at{" "}
                 <a href="https://www.thenexusindia.in/">
                   https://www.thenexusindia.in
                 </a>
@@ -84,18 +84,21 @@ export default function TermsConditions() {
               <h2>1. Definitions</h2>
               <ul>
                 <li>
-                  "Website" refers to The Nexus India, accessible from{" "}
+                  &quot;Website&quot; refers to The Nexus India, accessible from{" "}
                   <a href="https://www.thenexusindia.in/">
                     https://www.thenexusindia.in
                   </a>
                 </li>
                 <li>
-                  "We", "Us", and "Our" refers to the owners, operators, and
-                  creators of The Nexus India.
+                  &quot;We&quot;, &quot;Us&quot;, and &quot;Our&quot; refers to
+                  the owners, operators, and creators of The Nexus India.
                 </li>
-                <li>"You" refers to the user or viewer of our website.</li>
+                <li>
+                  {" "}
+                  &quot;You&quot; refers to the user or viewer of our website.
+                </li>
               </ul>
-              <h2>2. Use of Content (News & Information)</h2>
+              <h2>2. Use of Content (News &amp; Information)</h2>
               <p style={{ paddingLeft: "1rem" }}>
                 The content provided on this website (including news articles,
                 blog posts, sports updates, and opinions) is for general
@@ -113,9 +116,10 @@ export default function TermsConditions() {
                   own risk.
                 </li>
                 <li>
-                  Opinions expressed in "Blogs" or "Expert Opinions" sections
-                  are those of the authors and do not necessarily reflect the
-                  official policy or position of The Nexus India.
+                  Opinions expressed in &quot;Blogs&quot; or &quot;Expert
+                  Opinions&quot; sections are those of the authors and do not
+                  necessarily reflect the official policy or position of The
+                  Nexus India.
                 </li>
               </ul>
               <h2>3. Intellectual Property Rights</h2>
