@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
                   includes internet protocol (IP) addresses, type of browser,
                   Internet Service Provider (ISP), date/time stamp,
                   referring/exit pages, and the number of clicks. This is used
-                  to analyze trends, administer the site, and track user's
+                  to analyze trends, administer the site, and track user&apos;s
                   movement around the site. This data is not linked to any
                   information that is personally identifiable.
                 </li>
@@ -128,9 +128,9 @@ export default function PrivacyPolicy() {
                   &apos;cookies&apos;. These cookies are used to store
                   information including visitors&apos; preferences, and the
                   pages on the website that the visitor accessed or visited. The
-                  information is used to optimize the users' experience by
-                  customizing our web page content based on visitors' browser
-                  type and/or other information.
+                  information is used to optimize the users&apos; experience by
+                  customizing our web page content based on visitors&apos;
+                  browser type and/or other information.
                 </li>
               </ul>
               <h2>5. Google AdSense &amp; DoubleClick DART Cookie</h2>
@@ -178,7 +178,7 @@ export default function PrivacyPolicy() {
               </p>
               <ul>
                 <li>
-                  Request that a business that collects a consumer's personal
+                  Request that a business that collects a consumer&apos;s personal
                   data disclose the categories and specific pieces of personal
                   data that a business has collected about consumers.
                 </li>
@@ -187,8 +187,8 @@ export default function PrivacyPolicy() {
                   consumer that a business has collected.
                 </li>
                 <li>
-                  Request that a business that sells a consumer's personal data,
-                  not sell the consumer's personal data.
+                  Request that a business that sells a consumer&apos;s personal data,
+                  not sell the consumer&apos;s personal data.
                 </li>
                 <li>
                   If you make a request, we have one month to respond to you. If
