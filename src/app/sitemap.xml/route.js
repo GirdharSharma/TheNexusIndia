@@ -12,7 +12,13 @@ export async function GET() {
 
     const baseUrl = "https://thenexusindia.in";
 
-    const staticPages = ["", "/about", "/contact"];
+    const staticPages = [
+      "",
+      "/about",
+      "/contact",
+      "/terms&condition",
+      "/privacy-policy",
+    ];
 
     const staticUrls = staticPages
       .map(
