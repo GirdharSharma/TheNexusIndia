@@ -124,15 +124,16 @@ export default function PrivacyPolicy() {
               <h2>4. Cookies and Web Beacons</h2>
               <ul>
                 <li>
-                  Like any other website, The Nexus India uses 'cookies'. These
-                  cookies are used to store information including visitors'
-                  preferences, and the pages on the website that the visitor
-                  accessed or visited. The information is used to optimize the
-                  users' experience by customizing our web page content based on
-                  visitors' browser type and/or other information.
+                  Like any other website, The Nexus India uses
+                  &apos;cookies&apos;. These cookies are used to store
+                  information including visitors&apos; preferences, and the
+                  pages on the website that the visitor accessed or visited. The
+                  information is used to optimize the users' experience by
+                  customizing our web page content based on visitors' browser
+                  type and/or other information.
                 </li>
               </ul>
-              <h2>5. Google AdSense & DoubleClick DART Cookie</h2>
+              <h2>5. Google AdSense &amp; DoubleClick DART Cookie</h2>
               <ul>
                 <li>
                   Google is a third-party vendor on our site. It also uses
@@ -145,7 +146,7 @@ export default function PrivacyPolicy() {
                 </li>
                 <li>
                   Users may opt-out of the use of the DART cookie by visiting
-                  the Google ad and content network Privacy Policy at the
+                  the Google&apos;s ad and content network Privacy Policy at the
                   following URL:{" "}
                   <a href="https://policies.google.com/technologies/ads">
                     https://policies.google.com/technologies/ads
@@ -160,7 +161,7 @@ export default function PrivacyPolicy() {
               <h2>6. Third-Party Privacy Policies</h2>
               <ul>
                 <li>
-                  The Nexus India's Privacy Policy does not apply to other
+                  The Nexus India&apos;s Privacy Policy does not apply to other
                   advertisers or websites. Thus, we are advising you to consult
                   the respective Privacy Policies of these third-party ad
                   servers for more detailed information. It may include their
@@ -214,7 +215,7 @@ export default function PrivacyPolicy() {
                   erase your personal data, under certain conditions.
                 </li>
               </ul>
-              <h2>9. Children's Information</h2>
+              <h2>9. Children&apos;s Information</h2>
               <ul>
                 <li>
                   Another part of our priority is adding protection for children
