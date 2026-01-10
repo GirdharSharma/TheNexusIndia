@@ -16,7 +16,7 @@ export default function FooterCopyright({ dark }) {
                   <Link href="/about">About</Link>
                 </li> */}
                 <li>
-                  <a href="/terms&condition">Terms&Conditions</a>
+                  <a href="/terms-and-condition">Terms&Conditions</a>
                 </li>
                 <li>
                   <a href="/privacy-policy">Privacy Policy</a>
