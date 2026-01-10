@@ -16,7 +16,7 @@ export async function GET() {
       "",
       "/about",
       "/contact",
-      "/terms&condition",
+      "/terms-and-condition",
       "/privacy-policy",
     ];
 
